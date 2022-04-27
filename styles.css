@@ -272,6 +272,7 @@ no__cursor{
 
 .highlight__wrapper{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .highlight{
@@ -401,6 +402,15 @@ footer{
     .btn__menu{
         display: block;
     }
+
+    .highlight{
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .highlight:not(:last-child){
+        margin-bottom: 24px;
+    }
 }
 
 @media (max-width: 768px){
@@ -423,4 +433,10 @@ footer{
     .nft{
         width: 50%;
     }
+
+    #features{
+        height: 1000px;
+    }
+
+
 }
