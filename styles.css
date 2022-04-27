@@ -6,6 +6,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
 nav{
     height: 80px;
     display: flex;
@@ -34,7 +43,7 @@ p{
 }
 
 .logo{
-    width: 120px;
+    width: 125px;
     height: 150px;
     position: relative;
 }
@@ -75,6 +84,71 @@ li{
 .nav__link--primary:hover{
     text-decoration: none;
 }
+
+.btn__menu{
+    background-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    color:#195429;
+    display: none;
+}
+
+.menu__backdrop{
+    position: absolute;
+    background-color: #242424;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu--open .menu__backdrop{
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu--open{
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.menu__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__list{
+    padding: 32px 0;
+}
+
+.menu__link{
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu__link:hover{
+    text-decoration: underline;
+}
+
+.btn__menu--close{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 8px;
+    color: white;
+}
+
+/* Landing */
 
 #landing{
     background-color: #deffe7;
@@ -125,6 +199,12 @@ button:active{
     border-radius: 4px;
     border: none;
     margin-bottom: 54px;
+    transition: all 300ms ease;
+}
+
+.btn:hover{
+    color: lightgray;
+    cursor: pointer;
 }
 
 .header__img--wrapper{
@@ -146,6 +226,16 @@ img{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.row__column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+no__cursor{
+    cursor: not-allowed;
 }
 
 /* Highlights */
@@ -218,5 +308,119 @@ img{
 /* Features */
 
 #features{
+    padding-top: 8vw;
     background-color: #deffe7;
+    height: 700px;
+}
+
+.nfts{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.nft{
+    width: 25%;
+    padding: 24px;
+}
+
+.nft__img{
+    max-height: 250px;
+    transition: all 300ms ease;
+    cursor: not-allowed;
+}
+
+.nft__img--wrapper{
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+}
+
+.nft:hover .nft__img{
+    transform: scale(1.03)
+}
+
+.nft__title{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.nft__title:hover{
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+.nft__price--eth{
+    padding-right: 6px;
+    color: navy;
+}
+
+/* Explore */
+
+#explore{
+    padding-top: 8px;
+    background-color: #deffe7;
+    height: 250px;
+}
+
+/* Footer */
+
+footer{
+    background-color: #242424;
+}
+
+.footer__logo{
+    display: flex;
+}
+
+.footer__logo--img{
+    width: 160px;
+    filter: grayscale(1) invert(1);
+    margin-left: 16px;
+}
+.footer__link,
+.footer__copyright{
+    color: white;
+}
+
+.footer__list{
+    margin: 20px 0 24px 0;
+}
+
+.footer__link{
+    padding: 0 8px;
+}
+
+/* SMALL PHONES, TABLETS AND LARGE SMARTPHONES */
+
+@media (max-width: 550px){
+    .nav__links{
+        display: none;
+    }
+
+    .btn__menu{
+        display: block;
+    }
+}
+
+@media (max-width: 768px){
+    .header__description{
+        padding: 0 24px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 26px;
+    }
+
+    button{
+        font-size: 18px;
+    }
+
+    .nft{
+        width: 50%;
+    }
 }

@@ -7,6 +7,7 @@
     <title>BI NFT</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <section id="landing">
@@ -19,14 +20,34 @@
                         <li><a href="#" class="nav__link">Contact</a></li>
                         <li><a href="#" class="nav__link nav__link--primary">NFTs</a></li>
                     </ul>
-            </div>        
+            
+            <button class="btn__menu" onclick="openMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="menu__backdrop">
+                <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul class="menu__links">
+                    <li class="menu__list">
+                        <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="#features" class="menu__link" onclick="closeMenu()">NFTs</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="#" class="menu__link" onclick="closeMenu()">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>        
         </nav>
         <header>
             <div class="header__container">
                 <div class="header__description">
                     <h1>Bainbridge Island's most notable NFT platform</h1>
-                    <h2>Create your NFT portfolio <span class="green">BI NFT</span></h2>
-                    <button class="btn">Browse NFTs</button>
+                    <h2>Create your NFT portfolio with <span class="green">BI NFT</span></h2>
+                    <a href="#latest"><button class="btn">Browse NFTs</button></a>
                 </div>
                 <figure class="header__img--wrapper">
                     <img src="./assets/undraw_web_search_re_efla.svg" alt="">
@@ -84,10 +105,178 @@
         <section id="features">
             <div class="container">
                 <div class="row">
-
+                    <h2 class="section__title">Featured <span class="green">NFTs</span></h2>
+                    <div class="nfts">
+                        <div class="nft">
+                            <figure class="nft__img--wrapper">
+                                <img class="nft__img" src="./assets/loadedlion9998.PNG" alt="ape">
+                            </figure>
+                            <div class="nft__title">
+                                Loaded Lion #9998
+                            </div>
+                            <div class="nft_price">
+                                <i class="fab fa-ethereum"></i> <span class="nft__price--eth">10.48ETH</span>or $30,000
+                            </div>
+                        </div>
+                        <div class="nft">
+                            <figure class="nft__img--wrapper">
+                                <img class="nft__img" src="./assets/psychokitty.PNG" alt="ape">
+                            </figure>
+                            <div class="nft__title">
+                                Psycho Kitty #7842
+                            </div>
+                            <div class="nft_price">
+                                <i class="fab fa-ethereum"></i> <span class="nft__price--eth">0.45ETH</span>or $1.3k
+                            </div>
+                        </div>
+                        <div class="nft">
+                            <figure class="nft__img--wrapper">
+                                </i> <img class="nft__img" src="./assets/beatheadz.PNG" alt="ape">
+                            </figure>
+                            <div class="nft__title">
+                                Beat Headz #2352
+                            </div>
+                            <div class="nft_price">
+                                <i class="fab fa-ethereum"></i> <span class="nft__price--eth">17.47ETH</span>or $8
+                            </div>
+                        </div>
+                        <div class="nft">
+                            <figure class="nft__img--wrapper">
+                                <img class="nft__img" src="./assets/madhare.PNG" alt="ape">
+                            </figure>
+                            <div class="nft__title">
+                                Mad Hare #6494
+                            </div>
+                            <div class="nft_price">
+                                <span class="nft__price--eth">0.24ETH</span>or $700
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="latest">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section__title">Latest <span class="green">NFTs</span></h2>
+                    <div class="nfts">
+                        <div class="nft">
+                            <figure class="nft__img--wrapper">
+                                <img class="nft__img" src="./assets/eliteape.PNG" alt="ape">
+                            </figure>
+                            <div class="nft__title">
+                                Crypto Elite Ape #005
+                            </div>
+                            <div class="nft_price">
+                                <i class="fab fa-ethereum"></i> <span class="nft__price--eth">0.035ETH</span>or $100
+                            </div>
+                        </div>
+                        <div class="nft">
+                            <figure class="nft__img--wrapper">
+                                <img class="nft__img" src="./assets/ethersemperor$600.PNG" alt="ape">
+                            </figure>
+                            <div class="nft__title">
+                                Ether's Emperor
+                            </div>
+                            <div class="nft_price">
+                                <i class="fab fa-ethereum"></i> <span class="nft__price--eth">0.21ETH</span>or $600
+                            </div>
+                        </div>
+                        <div class="nft">
+                            <figure class="nft__img--wrapper">
+                                </i> <img class="nft__img" src="./assets/ape40$8.PNG" alt="ape">
+                            </figure>
+                            <div class="nft__title">
+                                Ape 40
+                            </div>
+                            <div class="nft_price">
+                                <i class="fab fa-ethereum"></i> <span class="nft__price--eth">0.0028ETH</span>or $8
+                            </div>
+                        </div>
+                        <div class="nft">
+                            <figure class="nft__img--wrapper">
+                                <img class="nft__img" src="./assets/felineflashy$23.PNG" alt="ape">
+                            </figure>
+                            <div class="nft__title">
+                                Crypto Elite Ape #005
+                            </div>
+                            <div class="nft_price">
+                                <span class="nft__price--eth">0.008ETH</span>or $23
+                            </div>
+                        </div>
+                        <div class="nft">
+                            <figure class="nft__img--wrapper">
+                                <img class="nft__img" src="./assets/loadedlion2.PNG" alt="ape">
+                            </figure>
+                            <div class="nft__title">
+                                Loaded Lion #9565
+                            </div>
+                            <div class="nft_price">
+                                <i class="fab fa-ethereum"></i> <span class="nft__price--eth">0.35ETH</span>or $1000
+                            </div>
+                        </div>
+                        <div class="nft">
+                            <figure class="nft__img--wrapper">
+                                <img class="nft__img" src="./assets/ape42$8.PNG" alt="ape">
+                            </figure>
+                            <div class="nft__title">
+                                Ape 42
+                            </div>
+                            <div class="nft_price">
+                                <i class="fab fa-ethereum"></i> <span class="nft__price--eth">0.0028ETH</span>or $8
+                            </div>
+                        </div>
+                        <div class="nft">
+                            <figure class="nft__img--wrapper">
+                                </i> <img class="nft__img" src="./assets/easter$100.PNG" alt="ape">
+                            </figure>
+                            <div class="nft__title">
+                                Easter
+                            </div>
+                            <div class="nft_price">
+                                <i class="fab fa-ethereum"></i> <span class="nft__price--eth">0.035ETH</span>or $100
+                            </div>
+                        </div>
+                        <div class="nft">
+                            <figure class="nft__img--wrapper">
+                                <img class="nft__img" src="./assets/ape53$1.PNG" alt="ape">
+                            </figure>
+                            <div class="nft__title">
+                                Ape 53
+                            </div>
+                            <div class="nft_price">
+                                <span class="nft__price--eth">0.00035ETH</span>or $1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="explore">
+            <div class="container">
+                <div class="row row__column">
+                    <h2>Explore more <span class="green">NFTs</span></h2>
+                    <a href="#features"><button class="btn">Browse NFTs</button></a>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <div class="row row__column">
+                <a href="#">
+                    <img src="./assets/ferry.png" class="footer__logo--img" alt="">
+                </a>
+                <div class="footer__list">
+                    <a href="" class="footer__link">Home</a>
+                    <a href="" class="footer__link no-cursor">About</a>
+                    <a href="" class="footer__link">NFTs</a>
+                    <a href="" class="footer__link no-cursor">Contact</a>
+                </div>
+                <div class="footer__copyright">Copyright &copy; 2022 BI NFTs</div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
